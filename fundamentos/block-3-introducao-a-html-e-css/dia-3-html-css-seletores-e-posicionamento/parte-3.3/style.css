@@ -1,0 +1,48 @@
+/* 1 questao */
+ol li {
+    background-color: yellow ;
+}
+ol li:nth-child(even){
+    color: green;
+}
+ol li:nth-child(odd){
+    text-transform: uppercase;
+}
+
+/* 2 questao     ||||||||||||||||||||| */
+
+h1, h2, h3{
+    color: red;
+}
+h1 em, h2 em, h3 em{
+    font-size: 40px;
+    border: solid black 1px;
+}
+/* 3 questao        ------------------ */
+li{
+    font-size: 20px;
+}
+li em{
+    font-weight: 700;
+}
+/* 4 questao        ------------------ */
+ul li:nth-of-type(-n+3){
+    color: blue;
+}
+/* ul li:nth-of-type(2){
+    background-color: pink;
+} */
+
+
+ul li a{
+    background-color: white;
+
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-color: none;
+}
+
+/* :nth-child(-n+3) */
+ li a[href*="mozilla"] {
+    color: black;
+  }
