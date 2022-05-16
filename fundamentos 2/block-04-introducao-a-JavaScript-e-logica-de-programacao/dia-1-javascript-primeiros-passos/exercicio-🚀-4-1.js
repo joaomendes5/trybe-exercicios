@@ -303,6 +303,242 @@ const numero1_09 = 8
 const numero2_09 = 782
 const numero3_09 = 56
 
+let eImpar = false
+
+if (numero1_09 % 2 !== 0 ||
+    numero2_09 % 2 !== 0 ||
+    numero3_09 % 2 !== 0
+    ) {
+        eImpar = true
+    };
+console.log(eImpar + " - sobre o impar ou par da 09")
+
+
+
+
+console.log(" ");
+console.log("-------------FIM-------------");
+console.log(" ");
+// ---------Resposta----------//
+
+// -----------------------------------------------------------------------------------------------------
+
+// ____________________Exercício [ 10 ]________________________ //
+// Escreva um programa que se inicie com dois valores 
+//em duas constantes diferentes: o custo de um produto e 
+//seu valor de venda. A partir dos valores, calcule quanto 
+//de lucro (valor de venda descontado o custo do produto) 
+//a empresa terá ao vender mil desses produtos.
+
+// Atente que, sobre o custo do produto, incide um imposto de 20%.
+
+// Seu programa também deve emitir uma mensagem de erro 
+//e encerrar caso algum dos seus valores de entrada seja menor que zero.
+
+// O lucro de um produto é o resultado da subtração do 
+//valor de venda pelo custo do mesmo, 
+//sendo que o imposto de 20% também faz parte do valor de custo.
+
+// valorCustoTotal = valorCusto + impostoSobreOCusto
+// lucro = valorVenda - valorCustoTotal (lucro de um produto)
+
+// ---------Resposta----------//
+console.log(" ");
+console.log("---------Exercício 10--------");
+console.log(" ");
+
+let valorCusto = -52
+let valorVenda = 143
+
+let valorImposto = valorCusto * 0.2
+let valorCustoTotal = valorCusto + valorImposto
+let valorLucro = valorVenda - valorCustoTotal
+
+let valorLucro_1000un = valorLucro * 1000
+if( valorCusto < 0 || valorVenda < 0) {
+    console.log("Algum dos valores está errado!!")
+} else {
+    console.log(valorLucro_1000un)
+}
+
+
+//quer saber:
+//valorLucro * 1000 vendas
+//valorImposto = (valorCusto * 1.2)
+//Emitir mensagem de erro se valores de entrada sejam < 0
+//valorLucro = valorVenda - valorCustoTotal
+//valorCustoTotal = valorCusto + valorImposto
+
+// ------------ RESPOSTA DO GABARITO ----------
+console.log(" ");
+console.log(" RESPOSTA DO GABARITO - Usando (if) ");
+console.log(" ");
+
+if (valorCusto >= 0 && valorVenda >= 0) {
+    const valorCustoTotal = valorCusto * 1.2;
+    const valorLucro_1000un = (valorVenda - valorCustoTotal) * 1000;
+    console.log(valorLucro_1000un);
+  } else {
+    console.log("Error, os valores não podem ser negativos");
+  };
+
+console.log(" ");
+console.log("-------------FIM-------------");
+console.log(" ");
+// ---------Resposta----------//
+
+// -----------------------------------------------------------------------------------------------------
+
+// ____________________Exercício [ 11 ]________________________ //
+// Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu 
+//salário bruto o INSS e o IR. Faça um programa que, 
+//dado um salário bruto, calcule o líquido a ser recebido.
+// A notação para um salário de R$1500,10, por exemplo, deve ser 1500.10. 
+//Para as faixas de impostos, use as seguintes referências:
+
+// INSS (Instituto Nacional do Seguro Social)
+// Salário bruto até R$ 1.556,94: alíquota de 8%
+// Salário bruto de R$ 1.556,95 a R$ 2.594,92: alíquota de 9%
+// Salário bruto de R$ 2.594,93 a R$ 5.189,82: alíquota de 11%
+// Salário bruto acima de R$ 5.189,82: alíquota máxima de R$ 570,88
+
+
+// IR (Imposto de Renda)
+// Até R$ 1.903,98: isento de imposto de renda
+// De R$ 1.903,99 a 2.826,65: alíquota de 7,5% e parcela de R$ 142,80 a deduzir do imposto
+// De R$ 2.826,66 a R$ 3.751,05: alíquota de 15% e parcela de R$ 354,80 a deduzir do imposto
+// De R$ 3.751,06 a R$ 4.664,68: alíquota de 22,5% e parcela de R$ 636,13 a deduzir do imposto
+// Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto.
+// Exemplo: Uma pessoa possui o salário bruto de R$ 3.000,00. O cálculo será:
+// 
+// => O salário bruto está entre R$ 2.594,93 e R$ 5.189,82, então sua alíquota para INSS é de 11%. 
+//    O INSS será 11% de R$ 3.000, ou seja, R$ 330,00.
+
+// => Para descobrir o salário-base, subtraia do salário bruto a alíquota do INSS: R$ 3.000,00 - R$ 330,00 = R$ 2.670,00.
+// => Para pegar o valor do IR, temos um salário (já deduzido o INSS) entre R$ 1.903,99 e 2.826,65, 
+//    sendo a alíquota, então, de 7.5%, com parcela de R$ 142,80 a deduzir do imposto. Assim, temos:
+// 
+//      => R$ 2.670,00: salário com INSS já deduzido;
+//      => 7.5%: alíquota de imposto de renda;
+//      => R$ 142,80 parcela a se deduzir do imposto.
+// 
+// => Fazendo a conta, temos: (7,5% de R$ 2.670,00) - R$ 142,80 = R$ 57,45
+// => O último cálculo para conseguir o salário líquido é 
+//          R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
+// 
+//                      => Resultado: R$ 2.612,55.
+//
+// => Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?
+
+// ---------Resposta----------//
+console.log(" ");
+console.log("---------Exercício 11--------");
+console.log(" ");
+let salarioBruto = 3000
+let salarioINSS = 0
+let salarioIR = 0
+let salarioLiquido = 0
+
+if (salarioBruto <= 1556.94) {
+    salarioINSS = salarioBruto * 0.92
+} else if (salarioBruto <= 2594.92) {
+    salarioINSS = salarioBruto * 0.91
+} else if (salarioBruto <= 5189.82) {
+    salarioINSS = salarioBruto * 0.89
+} else {
+    salarioINSS = salarioBruto - 570.88
+}
+
+if (salarioINSS <= 1903.98) {
+    salarioIR = salarioINSS
+} else if (salarioINSS <= 2826.65) {
+    salarioIR = salarioINSS - (-1 * ((salarioINSS * 0.075) + 142.8))
+} else if (salarioINSS <= 3751.05) {
+    salarioIR = salarioINSS - (-1 * ((salarioINSS * 0.15) + 354.80))
+} else if (salarioINSS <= 2826.65) {
+    salarioIR = salarioINSS - (-1 * ((salarioINSS * 0.225) + 636.13))
+} else {
+    salarioIR = salarioINSS - (-1 * ((salarioINSS * 0.275) + 869.36))
+}
+console.log("O salário, suado e muito trabalhado, depois de todos dos descontos para nada é " + salarioIR )
+
+// ------------ RESPOSTA DO GABARITO ----------
+console.log(" ");
+console.log(" RESPOSTA DO GABARITO - Usando (alíquotas como variáveis) ");
+console.log(" ");
+
+
+let aliquotINSS;
+let aliquotIR;
+
+const grossSalary = 2000.00;
+
+if (grossSalary <= 1556.94) {
+  aliquotINSS = grossSalary * 0.08;
+} else if (grossSalary <= 2594.92) {
+  aliquotINSS = grossSalary * 0.09;
+} else if (grossSalary <= 5189.82) {
+  aliquotINSS = grossSalary * 0.11;
+} else {
+  aliquotINSS = 570.88;
+}
+
+const baseSalary = grossSalary - aliquotINSS;
+
+if (baseSalary <= 1903.98) {
+  aliquotIR = 0;
+} else if (baseSalary <= 2826.65) {
+  aliquotIR = (baseSalary * 0.075) - 142.80;
+} else if (baseSalary <= 3751.05) {
+  aliquotIR = (baseSalary * 0.15) - 354.80;
+} else if (baseSalary <= 4664.68) {
+  aliquotIR = (baseSalary * 0.225) - 636.13;
+} else {
+  aliquotIR = (baseSalary * 0.275) - 869.36;
+};
+
+console.log("Salário: " + (baseSalary - aliquotIR));
+
+
+console.log(" ");
+console.log("-------------FIM-------------");
+console.log(" ");
+// ---------Resposta----------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------------------------------- //
+
+// ____________________Exercício [ XX ]________________________ //
+
+
+// ---------Resposta----------//
+console.log(" ");
+console.log("---------Exercício XX--------");
+console.log(" ");
+
+
+
 
 console.log(" ");
 console.log("-------------FIM-------------");
