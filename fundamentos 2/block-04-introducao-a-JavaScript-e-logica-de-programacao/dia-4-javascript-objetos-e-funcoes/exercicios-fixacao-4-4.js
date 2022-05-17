@@ -1,3 +1,8 @@
+console.log(" ")
+console.log("-----------------------")
+console.log("-----  Objetos   ------")
+console.log("-----------------------")
+console.log(" ")
 // ----------------------------------------
 // --------------EXERCICIO 01--------------
 // 1 - Crie um objeto player contendo 
@@ -102,11 +107,82 @@ console.log(" ")
 
 
 
-
-// ----------------------------------------
-// --------------EXERCICIO XX--------------
 console.log(" ")
-console.log("-----EXERCICIO XX------")
+console.log("-----------------------")
+console.log("-----For/in For/of-----")
+console.log("-----------------------")
+console.log(" ")
+// ----------------------------------------
+// --------------EXERCICIO 01--------------
+// 1 - Usando o objeto abaixo, utilize for/in
+//     e imprima no console a mensagem 
+//     'Olá xxxxx' para cada nome, substituindo
+//     o xxxxx pelo nome em questão.
+//let names = {
+//     person1: 'João',
+//     person2: 'Maria',
+//     person3: 'Jorge',
+//   };
+console.log(" ")
+console.log("-----EXERCICIO 01------")
+console.log(" ")
+
+let names = {
+    person1: 'João',
+    person2: 'Maria',
+    person3: 'Jorge',
+  };
+  for (let i in names) {
+    console.log(' Olá ' + names[i])
+  }
+
+
+console.log(" ")
+console.log("----------FIM----------")
+console.log(" ")
+// ----------------------------------------
+// --------------EXERCICIO 02--------------
+// 2 - Usando o objeto abaixo, utilize for/in
+//     e imprima um console.log com as chaves
+//     e valores desse objeto.
+//let car = {
+//     model: 'A3 Sedan',
+//     manufacturer: 'Audi',
+//     year: 2020
+//   };
+console.log(" ")
+console.log("-----EXERCICIO 02------")
+console.log(" ")
+
+let car = {
+    model: 'A3 Sedan',
+    manufacturer: 'Audi',
+    year: 2020
+  };
+  for ( let i in car) {
+      console.log(i, car[i])
+  }
+ 
+
+console.log(" ")
+console.log("----------FIM----------")
+console.log(" ")
+console.log(" ")
+console.log("-----------------------")
+console.log("--------Funções--------")
+console.log("-----------------------")
+console.log(" ")
+// ----------------------------------------
+// --------------EXERCICIO 01--------------
+//   Pegue cada um dos exercícios de 1 a 5 
+//   do final do dia 4.1 e faça com que todos 
+//   eles sejam funções de um mesmo arquivo. 
+//   As variáveis que você define no começo 
+//   de cada arquivo devem ser removidas e 
+//   transformadas em parâmetros das funções.
+
+console.log(" ")
+console.log("-----EXERCICIO 01------")
 console.log(" ")
 
 
