@@ -184,8 +184,133 @@ console.log(" ")
 console.log(" ")
 console.log("-----EXERCICIO 01------")
 console.log(" ")
+console.log("        |----|")
+console.log("        | 01 |")
+console.log("        |----|")
+console.log(" ")
+
+let numero1 = 45
+let numero2 = 34
+
+function soma( numero1, numero2) {
+    return numero1 + numero2
+}
+
+function subtracao( numero1, numero2){
+    return numero1 - numero2
+}
+
+function multiplicacao( numero1, numero2){
+    return numero1 * numero2
+}
+function divisao( numero1, numero2){
+    return numero1 / numero2
+}
+function modulo( numero1, numero2){
+    return numero1 % numero2
+}
+
+console.log(" A soma é " + soma(numero1, numero2))
+console.log(" A subtracao é " + subtracao(numero1, numero2))
+console.log(" A multiplicacao é " + multiplicacao(numero1, numero2))
+console.log(" A divisao é " + divisao(numero1, numero2))
+console.log(" A modulo é " + modulo(numero1, numero2))
+
+console.log(" ")
+console.log("----------FIM----------")
+console.log(" ")
+console.log("        |----|")
+console.log("        | 02 |")
+console.log("        |----|")
+console.log(" ")
+
+function retornaMaiorValor(numero1, numero2){
+    if( numero1 > numero2){
+        return numero1 + " é maior que " + numero2
+    }
+    return numero2 + " é maior que " + numero1
+}
+
+console.log(" " + retornaMaiorValor(numero1, numero2))
+
+console.log(" ")
+console.log("----------FIM----------")
+console.log(" ")
+console.log("        |----|")
+console.log("        | 03 |")
+console.log("        |----|")
+console.log(" ")
+
+function criandoNumeroAleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+    }
+
+let numero01_3 = criandoNumeroAleatorio(1, 100)
+let numero02_3 = criandoNumeroAleatorio(1, 100)
+let numero03_3 = criandoNumeroAleatorio(1, 100)
+console.log(" " + numero01_3)
+console.log(" " + numero02_3)
+console.log(" " + numero03_3)
+
+function retornaMaiorValor03(a, b, c){
+
+    if(a > b && a > c){
+        return ' O maior númeiro é: ' + a
+    } else if(b > a && b > a){
+        return ' O maior númeiro é: ' + b
+    }
+    return ' O maior númeiro é: ' + c
+}
+
+
+//console.log(retornaMaiorValor("numero01_3", "numero02_3", "numero03_3"))
+console.log(retornaMaiorValor03(numero01_3, numero02_3, numero03_3))
+
+console.log(" ")
+console.log("----------FIM----------")
+console.log(" ")
+console.log(" ")
+console.log("        |----|")
+console.log("        | 04 |")
+console.log("        |----|")
+console.log(" ")
+
+function retornaSePositivo (a) {
+    if(a > 0){
+        return a + " é um número 🟢 positivo"
+    }
+    return a + " é um número 🔴 negativo"
+}
+
+console.log(" " + retornaSePositivo(criandoNumeroAleatorio(-100, 100)))
 
 
 console.log(" ")
 console.log("----------FIM----------")
 console.log(" ")
+console.log(" ")
+console.log("        |----|")
+console.log("        | 05 |")
+console.log("        |----|")
+console.log(" ")
+
+function confirmaAngulos (a, b, c) {
+    let somaDosAngulos = a + b + c
+    let todosOsAngulosPositivos = a > 0 && b > 0 && c > 0
+
+    if(todosOsAngulosPositivos){
+        if(somaDosAngulos === 180){
+        return " Ângulos do triângulo estão OK 🟢"
+        } else {
+        return " Ângulos do triângulo são positivos mas impossíveis 🔴"
+        }
+    } else {
+        return " Um ou mais ângulos é negativo"
+    }
+}
+
+console.log(" " + confirmaAngulos(
+    criandoNumeroAleatorio(-10,90),
+    criandoNumeroAleatorio(-10,90),
+    criandoNumeroAleatorio(-10,90)
+))
