@@ -1,0 +1,37 @@
+<!-- EXERCICO 1 -->
+<!--
+Recupere o elemento que contém o título da página e faça algo com ele, como alterá-lo para o nome do seu filme favorito.
+Agora recupere o segundo parágrafo e use sua criatividade para alterá-lo.
+Por fim, recupere o subtítulo e altere-o também. -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph">Segundo parágrafo!</p>
+      <p class="second-paragraph">1 Segundo parágrafo!</p>
+      <p class="second-paragraph">2 Segundo parágrafo!</p>
+      <p class="second-paragraph">3 Segundo parágrafo!</p>
+      <p class="second-paragraph">4 Segundo parágrafo!</p>
+      <p class="second-paragraph">5 Segundo parágrafo!</p>
+
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+    //   document.getElementById('page-title').innerText = 'Meu filme favorito'
+    //   document.getElementById("second-paragraph").innerText = "Testando 1, 2 - 1, 2, 3."
+    //   document.getElementById('subtitle').innerText = 'Página de teste do João'
+    //   document.getElementsByClassName('second-paragraph')[0].innerText = 'Nova posição'
+    //   document.getElementsByTagName('p')[2].innerText = 'Terceiro parágrafo'
+      document.querySelector('#page-title').innerText = 'Meu filme favorito'
+      document.querySelector("#second-paragraph").innerText = "Testando 1, 2 - 1, 2, 3."
+      document.querySelector('#subtitle').innerText = 'Página de teste do João'
+      document.querySelectorAll('.second-paragraph')[0].innerText = 'eeeeNova posição';
+      document.querySelectorAll('p')[4].innerText = 'Terceiro parágrafo'  
+    document.querySelector
+    </script>
+  </body>
+</html>
